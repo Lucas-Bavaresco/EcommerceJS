@@ -81,7 +81,7 @@ function desenharProdutoNoCarrinho(idProduto) {
     <button id="remover-item-${
       produto.id
     }" class="absolute top-0 right-2"><i class="fa-solid fa-circle-xmark text-slate-500 hover:text-slate-800"></i></button>
-    <img src="./public/img/${produto.imagem}" alt="Carrinho: ${
+    <img src="./img/${produto.imagem}" alt="Carrinho: ${
     produto.nome
   }" class="h-24 rounded-lg" />
     <div class="p-2 flex flex-col justify-between">
