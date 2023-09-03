@@ -6,7 +6,7 @@ export function renderizarCatalogo() {
     const cartaoProduto = `<div class='border-solid shadow-xl shadow-slate-400 rounded-lg g w-48 m-2 flex flex-col pb-2 justify-between group ${
       produtoCatalogo.feminino ? "feminino" : "masculino"
     }' id="card-produto-${produtoCatalogo.id}">
-      <img src="./assets/img/${
+      <img src="./public/img/${
         produtoCatalogo.imagem
       }" alt="Produto 1 do Ecommerce" class="group-hover:scale-110 duration-300 m-3 rounded-lg" />
       <p class='marca'>${produtoCatalogo.marca}</p>
