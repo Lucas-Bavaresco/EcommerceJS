@@ -38,8 +38,8 @@ export function inicializarFiltros() {
     .addEventListener("click", exibirTodos);
   document
     .getElementById("exibir-masculinos")
-    .addEventListener("click", esconderMasculinos);
+    .addEventListener("click", esconderFemininos);
   document
     .getElementById("exibir-femininos")
-    .addEventListener("click", esconderFemininos);
+    .addEventListener("click", esconderMasculinos);
 }
