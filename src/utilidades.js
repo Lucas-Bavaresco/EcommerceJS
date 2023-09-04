@@ -100,11 +100,14 @@ export function desenharProdutoCarrinhoSimples(
   }
 
   const cartaoProdutoCarrinho = `
-        <img src="./img/${produto.imagem}" alt="Carrinho: ${
-    produto.nome
-  }" class="h-24 rounded-lg" />
+        <img src="./img/${produto.imagem}" 
+        alt="Carrinho: ${produto.nome}"
+        class="h-24 rounded-lg" 
+        />
     <div class="p-2 flex flex-col justify-between">
-      <p class="text-slate-900 text-sm">${produto.nome}</p>
+      <p class="text-slate-900 text-sm">
+      ${produto.nome}
+      </p>
       <p class="text-slate-400 text-xs">Tamanho: M</p>
       <p class="text-green-700 text-lg">R$ ${produto.preco}</p>
     </div>

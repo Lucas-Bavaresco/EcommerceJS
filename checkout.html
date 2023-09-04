@@ -20,8 +20,8 @@
         </a>
     </header>
     <form class="flex w-100 px-5 gap-4 py-10 grow">
-        <section id="dados-usuario" class="w-1/3 bg-white-300 rounded-lg py-5">
-            <div>
+        <section id="dados-usuario" class="w-1/3 bg-white rounded-lg py-5">
+            <!-- <div> -->
                 <p class="mb-5 text-center font-bold">Seus dados:</p>
                 <div class="flex flex-col px-10 py-3">
                     <label for="nome" class="font-bold text-sm mb-2">Nome</label>
@@ -37,14 +37,14 @@
                     <label for="tel" class="font-bold text-sm mb-2">Telefone de Contato</label>
                     <input type="tel" id="tel" class="rounded-sm px-2 border-2 border-slate-200 py-1"
                         placeholder="(99)99999-9999" required>
-                </div>
+                <!-- </div> -->
         </section>
         <section id="dados-pagamento" class="w-1/3 bg-white-300 rounded-lg py-5">
             <div id="pagamento-entrega" class="w-1/3 bg-white-300 rounded-lg py-5">
                 <p class="mb-5 text-center font-bold">Pagamento e Entrega:</p>
                 <div class="flex flex-col px-10 py-3">
                     <label for="numero-cartao" class="font-bold text-sm mb-2">Número do Cartão</label>
-                    <input type="text" id="nome" class="rounded-sm px-2 border-2 border-slate-200 py-1"
+                    <input type="text" id="numero-cartao" class="rounded-sm px-2 border-2 border-slate-200 py-1"
                         placeholder="1111 1111 1111 1111" required>
                 </div>
                 <div class="flex">
@@ -54,7 +54,7 @@
                             placeholder="222" required>
                     </div>
                     <div class="flex flex-col px-10 py-3 W-1/2">
-                        <label for="numero-cartao" class="font-bold text-sm mb-2">Data de Validade</label>
+                        <label for="data-expiracao" class="font-bold text-sm mb-2">Data de Validade</label>
                         <input type="text" id="data-expiracao" class="rounded-sm px-2 border-2 border-slate-200 py-1"
                             placeholder="10/24" required>
                     </div>
@@ -76,13 +76,13 @@
                             placeholder="444" required>
                     </div>
                     <div class="flex flex-col px-10 py-3 W-1/2">
-                        <label for="numero-cartao" class="font-bold text-sm mb-2">Complemento</label>
+                        <label for="complemento" class="font-bold text-sm mb-2">Complemento</label>
                         <input type="text" id="complemento" class="rounded-sm px-2 border-2 border-slate-200 py-1"
                             placeholder="555" required>
                     </div>
                 </div>
         </section>
-        <section id="produtos-checkout" class="w-1/3 bg-white-300 rounded-lg py-5">
+        <section id="produtos-checkout" class="w-1/3 bg-white rounded-lg py-5">
             <section id="container-produtos-checkout" class="h-4/5 overflow-y-auto px-2 flex flex-col items-center">
             </section>
             <section id="celula-checkout" class="flex flex-col px-2 h-1/5 justify-around">

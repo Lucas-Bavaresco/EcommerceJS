@@ -9,7 +9,7 @@ function criarPedidoHistorico(pedidoComData) {
   ).toLocaleDateString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</p>
  <section id="container-pedidos-${
    pedidoComData.dataPedido
- }" class="bg-slate-300 p-3 rounded-md ></section>
+ }" class="bg-slate-300 p-3 rounded-md"></section>
  `;
   const main = document.getElementsByTagName("main")[0];
   main.innerHTML += elementoPedido;
