@@ -60,11 +60,11 @@ function atualizarInformacaoQuantidade(idProduto) {
 }
 
 function desenharProdutoNoCarrinho(idProduto) {
-  const produto = catalogo.find((p) => p.id === idProduto); //encontra na lista de Produtos o mesmo ID solicitado na entrada desta função
+  const produto = catalogo.find((p) => p.id === idProduto);
   const containerProdutosCarrinho =
     document.getElementById("produtos-carrinho");
 
-  const elementoArticle = document.createElement("article");
+  const elementoArticle = document.createElement("article"); //<article></article>
   const articleClasses = [
     "flex",
     "bg-slate-100",
@@ -76,27 +76,35 @@ function desenharProdutoNoCarrinho(idProduto) {
   for (const articleClass of articleClasses) {
     elementoArticle.classList.add(articleClass);
   }
+  //<article class="flex bg-slate-100 rounded-lg p-1 relative"></article>
 
-  const cartaoProdutoCarrinho = `
-    <button id="remover-item-${
-      produto.id
-    }" class="absolute top-0 right-2"><i class="fa-solid fa-circle-xmark text-slate-500 hover:text-slate-800"></i></button>
-    <img src="./img/${produto.imagem}" alt="Carrinho: ${
-    produto.nome
-  }" class="h-24 rounded-lg" />
+  const cartaoProdutoCarrinho = `<button id="remover-item-${
+    produto.id
+  }" class="absolute top-0 right-2">
+      <i
+        class="fa-solid fa-circle-xmark text-slate-500 hover:text-slate-800"
+      ></i>
+    </button>
+    <img
+      src="./assets/img/${produto.imagem}"
+      alt="Carrinho: ${produto.nome}"
+      class="h-24 rounded-lg"
+    />
     <div class="p-2 flex flex-col justify-between">
-      <p class="text-slate-900 text-sm">${produto.nome}</p>
+      <p class="text-slate-900 text-sm">
+        ${produto.nome}
+      </p>
       <p class="text-slate-400 text-xs">Tamanho: M</p>
-      <p class="text-green-700 text-lg">R$ ${produto.preco}</p>
+      <p class="text-green-700 text-lg">$${produto.preco}</p>
     </div>
-    <div class="flex text-slate-950 items-end absolute bottom-0 right-2 text-lg">
-      <button id="decrementar-produto-${produto.id}"> - </button>
-      <p id="quantidade-${produto.id}" class="ml-2">${
+    <div class='flex text-slate-950 items-end absolute bottom-0 right-2 text-lg'>
+        <button id='decrementar-produto-${produto.id}'>-</button>
+        <p id='quantidade-${produto.id}' class='ml-2'>${
     idsProdutoCarrinhoComQuantidade[produto.id]
-  } </p>
-      <button class="ml-2" id="incrementar-produto-${produto.id}"> + </button>
-    </div>
-  `;
+  }</p>
+        <button class='ml-2' id='incrementar-produto-${produto.id}'>+</button>
+    </div>`;
+  //<article class="flex bg-slate-100 rounded-lg p-1 relative">codigo do cartao do produto</article>
 
   elementoArticle.innerHTML = cartaoProdutoCarrinho;
   containerProdutosCarrinho.appendChild(elementoArticle);
@@ -122,7 +130,6 @@ export function renderizarProdutosCarrinho() {
   for (const idProduto in idsProdutoCarrinhoComQuantidade) {
     desenharProdutoNoCarrinho(idProduto);
   }
-  idsProdutoCarrinhoComQuantidade;
 }
 
 export function adicionarAoCarrinho(idProduto) {
@@ -144,5 +151,5 @@ export function atualizarPrecoCarrinho() {
       catalogo.find((p) => p.id === idProdutoNoCarrinho).preco *
       idsProdutoCarrinhoComQuantidade[idProdutoNoCarrinho];
   }
-  precoCarrinho.innerText = `Total: R$${precoTotalCarrinho} `;
+  precoCarrinho.innerText = `Total: $${precoTotalCarrinho}`;
 }

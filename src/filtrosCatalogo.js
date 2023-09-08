@@ -6,7 +6,7 @@ function exibirTodos() {
   );
 
   for (const produto of produtosEscondidos) {
-    produtosEscondidos.classList.remove("hidden");
+    produto.classList.remove("hidden");
   }
 }
 
