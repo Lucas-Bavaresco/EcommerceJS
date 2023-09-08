@@ -7,7 +7,7 @@ export function renderizarCatalogo() {
       produtoCatalogo.feminino ? "feminino" : "masculino"
     }' id="card-produto-${produtoCatalogo.id}">
         <img
-        src="./img/${produtoCatalogo.imagem}"
+        src="./assets/img/${produtoCatalogo.imagem}"
         alt="Produto 1 do Ecommerce Hashtag."
         class='group-hover:scale-110 duration-300 my-3 rounded-lg'
         />
